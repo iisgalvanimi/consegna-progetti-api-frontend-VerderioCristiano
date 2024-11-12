@@ -1,0 +1,9 @@
+li{
+    cursor: pointer;
+    
+}
+
+.active-menu{
+    color: blue;
+}
+
