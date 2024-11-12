@@ -1,6 +1,5 @@
-<div class="card" *ngFor="let fruit of fruits" style="border: solid; width: 10%; float: left;">
+
+<div *ngFor="let fruit of fruits">
     <span style="width: 100%;">{{fruit.emoji}}</span>
-    <div class="container">
-      <h4><b>{{fruit.name}}</b></h4>
-    </div>
+    <span style="width: 100%;">{{fruit.name}}</span>
   </div>
