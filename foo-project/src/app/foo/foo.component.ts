@@ -7,11 +7,16 @@ import { Observable } from 'rxjs';
  templateUrl: './foo.component.html',
  styleUrls: ['./foo.component.css']
 })
+
+
 export class FooComponent {
    data!: Object; //Il ‘!’ serve a creare variabili non inizializzate
    loading: boolean=false;
    o! :Observable<Object>;
-   constructor(public http: HttpClient) {}
+   constructor(public http: HttpClient) {
+    this.http = http;
+
+   }
    makeRequest(): void {
      console.log("here");
      this.loading = true;
@@ -23,4 +28,25 @@ export class FooComponent {
      this.data = new Object(d);
      this.loading = false;
    }
+
+
+   //L'operazione di post necessita un parametro in più.
+//Viene creata una stringa (JSON.strigify) a partire da un oggetto Typescript
+ makeCompactPost(): void {
+  this.loading = true;
+  this.http
+    .post('https://jsonplaceholder.typicode.com/posts',
+      JSON.stringify({
+        body: 'bar',
+        title: 'foo',
+        userId: 1
+      })
+    )
+    .subscribe((data) => {
+      this.data = data;
+      this.loading = false;
+    });
+}
+
+
   }
