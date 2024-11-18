@@ -18,7 +18,6 @@ export class FooComponent {
 
    }
    makeRequest(): void {
-     console.log("here");
      this.loading = true;
      this.o = this.http.get('https://jsonplaceholder.typicode.com/posts/1');
      this.o.subscribe(this.getData);
