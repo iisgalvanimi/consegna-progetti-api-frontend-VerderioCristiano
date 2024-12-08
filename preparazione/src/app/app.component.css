@@ -1,0 +1,66 @@
+/* Global reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .navbar-light .navbar-brand {
+    font-size: 24px;
+    color: #3498db;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+  
+  /* Navbar hover effect */
+  .navbar-light .navbar-brand:hover {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  /* Mobile-responsive navbar */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 20px;
+      padding: 10px 15px;
+    }
+  }
+  
+  /* Router outlet */
+  router-outlet {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
