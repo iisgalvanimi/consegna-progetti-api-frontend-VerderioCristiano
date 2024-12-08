@@ -1,0 +1,144 @@
+/* Global reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  h1, p {
+    margin: 0;
+  }
+  
+  /* Main container */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Loading container */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+  }
+  
+  .spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-container p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Card container */
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .card-image-wrapper {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-details {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .card-details p {
+    margin: 8px 0;
+  }
+  
+  .card-details strong {
+    color: #2c3e50;
+  }
+  
+  /* Price styling */
+  .card-details .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 600px) {
+    .main-container {
+      width: 100%;
+      margin: 10px;
+      padding: 15px;
+    }
+  
+    .card-title {
+      font-size: 24px;
+    }
+  
+    .card-details p {
+      font-size: 14px;
+    }
+  
+    .card-image-wrapper {
+      margin-bottom: 15px;
+    }
+  
+    .card-image {
+      width: 90%;
+      max-width: 300px;
+    }
+  }
+  
